@@ -1,0 +1,376 @@
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+
+CoreGui:SetCore("SendNotification", {
+    -- Customizable
+    Title = "白名单认证",
+    Text = "白名单验证...",
+    Duration = 3, --时间
+})
+
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+
+local Whitelisted = false;
+
+if game.Players.LocalPlayer.Name == "dujianjjjjjj" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "ffghjhfjf2" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "jOKskdJp4XrW9Kt" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "dujianjjjj" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "ddddfDSDC" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "ceshi666" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "max_nn227" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "tapqnd" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "vpn_kerot" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if game.Players.LocalPlayer.Name == "玩家用户名" then 
+Whitelisted = true 
+end
+
+if Whitelisted == true then
+
+CoreGui:SetCore("SendNotification", {
+    -- Customizable
+    Title = "白名单认证",
+    Text = "玩家:"..game.Players.LocalPlayer.Name.."，你是白名单玩家，稍后会加载脚本",
+    Duration = 7, --时间
+}) 
+   
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/jrdKakD6"))()
+
+local Window = OrionLib:MakeWindow({Name = "水下世界v1.2.1", HidePremium = false, SaveConfig = false, IntroText = "注入器："..identifyexecutor(), ConfigFolder = "通用脚本"})
+
+OrionLib:MakeNotification({
+    Name = "水下世界",
+    Content = "作者:小小鱼",
+    Image = "rbxassetid://4483345998",
+    Time = 6
+})
+
+local player = Window:MakeTab({
+    Name = "玩家",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+player:AddTextbox({
+    Name = "移动速度",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
+
+player:AddTextbox({
+    Name = "跳跃高度",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+player:AddToggle({
+    Name = "穿墙",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            Noclip = true
+            Stepped = game.RunService.Stepped:Connect(function()
+                if Noclip == true then
+                    for a, b in pairs(game.Workspace:GetChildren()) do
+                        if b.Name == game.Players.LocalPlayer.Name then
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    v.CanCollide = false
+                                end
+                            end
+                        end
+                    end
+                else
+                    Stepped:Disconnect()
+                end
+            end)
+        else
+            Noclip = false
+        end
+    end
+})
+
+player:AddButton({
+    Name = "飞行",
+    Callback = function()
+          loadstring(game:HttpGet("https://pastebin.com/raw/U27yQRxS"))()
+      end
+})
+
+player:AddButton({
+    Name = "偷别人物品栏",
+    Callback = function()
+          --Copy And Paste:
+    for i,v in pairs (game.Players:GetChildren()) do
+    wait()
+    for i,b in pairs (v.Backpack:GetChildren()) do
+    b.Parent = game.Players.LocalPlayer.       Backpack
+    end
+    end
+      end
+})
+
+local other = Window:MakeTab({
+    Name = "其他",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+other:AddButton({
+    Name = "跟踪玩家",
+    Callback = function()
+          loadstring(game:HttpGet("https://pastebin.com/raw/F9PNLcXk"))()
+      end
+})
+
+other:AddButton({
+    Name = "指令",
+    Callback = function()
+          loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+      end
+})
+
+other:AddButton({
+    Name = "黑色星期五的脚本",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
+      end
+})
+
+other:AddButton({
+    Name = "起床战争vape",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+      end
+})
+
+other:AddButton({
+    Name = "收养我吧",
+    Callback = function()
+          loadstring(game:HttpGet(('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'),true))()
+      end
+})
+
+other:AddButton({
+    Name = "blox fruit",
+    Callback = function()
+          loadstring(game:HttpGet("https://github.com/LeVanNhatIT/ChuRoblox/raw/main/ChuRobloxPre.lua"))()
+      end
+})
+
+other:AddButton({
+    Name = "doors",
+    Callback = function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/ExolutionProject/Scripts/main/ExolutionPremiumHub.lua'))() 
+
+
+      end
+})
+
+other:AddButton({
+    Name = "造船寻宝刷钱",
+    Callback = function()
+          loadstring(game:HttpGet(('https://raw.githubusercontent.com/urmomjklol69/GoldFarmBabft/main/GoldFarm.lua'),true))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "自然灾害",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/xiao122231/xiao122231/main/%E8%87%AA%E7%84%B6%E7%81%BE%E5%AE%B3"))()
+
+
+      end
+})
+
+
+other:AddButton({
+    Name = "cw",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "the rake",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsLynX/LynX/main/KeySystem/Loader.lua"))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "the rake2",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/RakeEvolved/Stable/Source.lua"))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "兵工场",
+    Callback = function()
+          loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"), true))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "监狱人生",
+    Callback = function()
+          loadstring(game:HttpGet('https://paste.website/p/96d68817-3f1e-4fef-a8b8-9aafdc810329.txt'))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "战争大亨",
+    Callback = function()
+          local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptware2/scriptware/main/obfa?token=GHSAT0AAAAAACFO4LM4EHUR5USK6UFUCGBCZGAOONQ"))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "密蜂摸拟器",
+    Callback = function()
+          loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "键盘",
+    Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+
+      end
+})
+
+other:AddButton({
+    Name = "暂定",
+    Callback = function()
+          
+
+
+      end
+})
+
+other:AddToggle({
+    Name = "夜视",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game.Lighting.Ambient = Color3.new(1, 1, 1)
+        else
+            game.Lighting.Ambient = Color3.new(0, 0, 0)
+        end
+    end
+})
+
+local about = Window:MakeTab({
+    Name = "关于",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+OrionLib:Init()
+   
+   else
+       game.Players.LocalPlayer:Kick("你没有白名单傻逼")--踢人函数
+   end
